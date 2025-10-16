@@ -7,6 +7,7 @@ const Home = () => {
         <div className='home-header'>
             <h3>Welcome to Home Page</h3>
             <button onClick={()=>navigate('/counter')}>Counter</button>
+            <button onClick={()=>navigate('/search')}>Search</button>
         </div>
     )
 }

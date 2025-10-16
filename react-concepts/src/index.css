@@ -34,3 +34,16 @@ code {
 .home-header button:hover {
     background-color: #0056b3;
 }
+
+.table {
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    margin-left: 100px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
