@@ -2,7 +2,7 @@ import './App.css';
 import Counter from './components/Counter';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import DashboardSeacrh from './components/DashboardSearch';
+import DashboardSearch from './components/DashboardSearch';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/counter' element={<Counter/>}/>
-        <Route path='/search' element={<DashboardSeacrh/>}/>
+        <Route path='/search' element={<DashboardSearch/>}/>
 
       </Routes>
     </BrowserRouter>

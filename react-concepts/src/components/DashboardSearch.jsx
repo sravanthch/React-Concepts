@@ -1,26 +1,38 @@
-import React from 'react'
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const DashboardSeacrh = () => {
+const DashboardSearch = () => {
+  const [apiData, setApiData] = useState([]); 
+
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((response) => setApiData(response.data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div>
-      <table className='table'>
+      <table className="table">
         <thead>
-          <th>Name</th>
-          <th>Age</th>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+          </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Sravanth</td>
-            <td>25</td>
-          </tr>
-          <tr>
-            <td>Aayush</td>
-            <td>27</td>
-          </tr>
+          {apiData.map((obj) => (
+            <tr key={obj.id}>
+              <td>{obj.id}</td>
+              <td>{obj.name}</td>
+              <td>{obj.username}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardSeacrh
+export default DashboardSearch;
