@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { InputText } from 'primereact/inputtext';
 
 const DashboardSearch = () => {
-  const [apiData, setApiData] = useState([]); 
+  const [apiData, setApiData] = useState([]);
+  const [searchValue, setSearchValue] = useState('')
 
   useEffect(() => {
     axios
@@ -10,9 +12,20 @@ const DashboardSearch = () => {
       .then((response) => setApiData(response.data))
       .catch((err) => console.error(err));
   }, []);
-
+  console.log(searchValue)
   return (
     <div>
+      <div style={{ paddingLeft: '10px', display: 'flex', flexDirection: 'column' }}>
+        <h3>Search Here</h3>
+        <InputText
+          placeholder="Search"
+          onChange={(e) => setSearchValue(e.target.value)}
+          style={{
+            width: '200px', padding: '8px 12px',
+            borderRadius: '6px',
+          }}
+        />
+      </div>
       <table className="table">
         <thead>
           <tr>
