@@ -6,7 +6,6 @@ import RedirectHome from "./RedirectHome";
 
 
 const DashboardSearch = () => {
-  const navigate = useNavigate()
   const [apiData, setApiData] = useState([]);
   const [searchValue, setSearchValue] = useState('')
 
