@@ -11,7 +11,6 @@ const RedirectHome = () => {
                 style={{
                     padding: '12px 20px',
                     margin: '10px',
-                    marginLeft: '100px',
                     backgroundColor: '#28a745',
                     color: 'white',
                     border: 'none',
