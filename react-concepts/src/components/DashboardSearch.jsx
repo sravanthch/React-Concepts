@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { InputText } from 'primereact/inputtext';
-import { Button } from 'primereact/button';
 import { useNavigate } from "react-router-dom";
+import RedirectHome from "./RedirectHome";
 
 
 const DashboardSearch = () => {
@@ -48,22 +48,7 @@ const DashboardSearch = () => {
           ))}
         </tbody>
       </table>
-      <Button
-        label="Home"
-        onClick={() => navigate('/')}
-        style={{
-          padding: '12px 20px',
-          margin: '10px',
-          marginLeft: '100px',
-          backgroundColor: '#28a745',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          transition: 'background-color 0.3s ease'
-
-        }}
-      />
+      <RedirectHome/>
     </div>
   );
 };
