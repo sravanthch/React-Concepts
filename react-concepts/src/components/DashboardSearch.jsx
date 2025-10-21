@@ -15,10 +15,10 @@ const DashboardSearch = () => {
       .then((response) => setApiData(response.data))
       .catch((err) => console.error(err));
   }, []);
-  console.log(searchValue)
+  console.log(apiData)
   return (
     <div>
-      <div style={{ paddingLeft: '10px', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ marginLeft: '90px', display: 'flex', flexDirection: 'column' }}>
         <h3>Search Here</h3>
         <InputText
           placeholder="Search"
@@ -47,7 +47,9 @@ const DashboardSearch = () => {
           ))}
         </tbody>
       </table>
-      <RedirectHome/>
+      <div style={{marginLeft: '90px'}}>
+        <RedirectHome/>
+      </div>
     </div>
   );
 };
