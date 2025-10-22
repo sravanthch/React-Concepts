@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { InputText } from 'primereact/inputtext';
-import { useNavigate } from "react-router-dom";
 import RedirectHome from "./RedirectHome";
 
 
