@@ -13,7 +13,7 @@ const DashboardSearch = () => {
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         setApiData(response.data);
-        // setFilteredData(response.data);
+        setFilteredData(response.data);
       })
       .catch((err) => console.error(err));
   }, []);
